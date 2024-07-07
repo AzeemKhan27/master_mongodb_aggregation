@@ -1,0 +1,19 @@
+[
+
+    // STAGE - 1 - START
+    {
+      $match:{
+        isActive : false,
+        age:{
+          $gte:25,
+          $lte:35
+        }
+      }
+    },   // STAGE - 1 - END
+    
+    // STAGE - 2 - START
+    {
+      $count: "activeUser"
+    }
+    // STAGE - 2 - END
+  ]
