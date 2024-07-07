@@ -1,0 +1,22 @@
+
+
+db.users.aggregate[
+    {
+        $group: {
+            _id : "company.location.country",
+            countryUserCount : {
+                $sum : 1
+            }
+        }
+    },
+
+    {
+        $sort: {
+            countryUserCount: -1
+        }
+    },
+
+    {
+        $limit : 2
+    }
+]
