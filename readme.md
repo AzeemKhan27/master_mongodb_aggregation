@@ -1,4 +1,8 @@
-test
+## MyNotes:
+### (1) $Group : this aggregate stage that use for grouped the documents and allow to do more work with the same selected document and it always return unique fields.
+
+### (2) $unwind : It is used to transform a single document containing an array into multiple documents and each document contaning an individual values from an array.
+
 
 [Data_Link](https://gist.github.com/hiteshchoudhary)
 
@@ -16,3 +20,13 @@ test
 ### 4- Find the total numbers of gender like males and females
 
 [pipeline query](https://github.com/AzeemKhan27/master_mongodb_aggregation/blob/main/3-totalNumberGenders.json)
+
+### 5- highest registered users in which country:
+[pipeline query](https://github.com/AzeemKhan27/master_mongodb_aggregation/blob/main/4-highestRegisteredUsersInWhichCountry.json)
+
+
+### 6- List all the unique eyes colors present in the collection:
+[pipeline query](https://github.com/AzeemKhan27/master_mongodb_aggregation/blob/main/5-uniqueEyeColorPresentInCollection.json)
+
+### 7- What is the average number of tags per user?
+[pipeline query]()
