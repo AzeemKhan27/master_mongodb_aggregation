@@ -1,0 +1,13 @@
+
+
+
+db.authors.aggregate[
+    {
+        $group:{
+            _id:"$gender", //null     //if i want to group users or documents together based on "gender" attribute
+            averageAge:{
+                $avg:"$age"
+            }
+        }
+    }
+]   
