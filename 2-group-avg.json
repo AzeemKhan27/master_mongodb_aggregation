@@ -4,10 +4,36 @@
 db.authors.aggregate[
     {
         $group:{
-            _id:"$gender", //null     //if i want to group users or documents together based on "gender" attribute
+            _id:"$gender",  //null if we group all documents we have to put "null"
+                            //if i want to group users or documents together based on "gender" attribute
             averageAge:{
                 $avg:"$age"
             }
         }
     }
 ]   
+
+
+//find the most 5 comon favorite fruit.
+
+
+db.authors.aggregate[
+    {
+        $group:{
+            _id:"$favoriteFruit",
+            count: {           // it will count all documents with the each favorite fruit
+                $sum:1
+            }
+        },
+
+        {
+            $sort:{
+                counts: -1
+            }
+        },
+
+        {
+            $limit: 5
+        }
+    }
+]
