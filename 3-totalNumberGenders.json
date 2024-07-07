@@ -1,0 +1,18 @@
+
+
+// Find the total numbers of the males and females
+
+db.users.aggregate[
+    {
+        $group: {
+            _id: "$gender",
+            countNumberOfGender : {
+                $sum:1
+            }   
+        },
+
+        $sort:{
+            countNumberOfGender : 1
+        }
+    }
+]
