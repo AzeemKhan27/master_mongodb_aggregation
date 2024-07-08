@@ -5,6 +5,10 @@
 
 ### (3) $addField : Adds new fields to documents. $addFields outputs documents that contain all existing fields from the input documents and newly added fields.                                                                                                           The $addFields stage is equivalent to a $project stage that explicitly specifies all existing fields in the input documents and adds the new fields.
 
+### (4) $match: Filters the documents to pass only the documents that match the specified condition to the next pipeline stage.
+
+### (5) $count: It returns the number of documents at this stage of the aggregation pipeline.
+
 
 [Data_Link](https://gist.github.com/hiteshchoudhary)
 
@@ -32,3 +36,6 @@
 
 ### 7- What is the average number of tags per user?
 [pipeline query](https://github.com/AzeemKhan27/master_mongodb_aggregation/blob/main/6-avgNumTagsPerUser.json)
+
+### 8- how many users have 'enim' as one of their tags?
+[pipeline query](https://github.com/AzeemKhan27/master_mongodb_aggregation/blob/main/7-filterUserByGivenValueInTags.json)
