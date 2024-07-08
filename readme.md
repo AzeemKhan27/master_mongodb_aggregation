@@ -7,7 +7,9 @@
 
 ### (4) $match: Filters the documents to pass only the documents that match the specified condition to the next pipeline stage.
 
-### (5) $count: It returns the number of documents at this stage of the aggregation pipeline.
+### (5) $project : it passes along the documents with the requested fields to the next pipeline. The specified fields can be existing fields from the input documents or newly computed fields.
+
+### (6) $count: It returns the number of documents at this stage of the aggregation pipeline.
 
 
 [Data_Link](https://gist.github.com/hiteshchoudhary)
@@ -39,3 +41,9 @@
 
 ### 8- how many users have 'enim' as one of their tags?
 [pipeline query](https://github.com/AzeemKhan27/master_mongodb_aggregation/blob/main/7-filterUserByGivenValueInTags.json)
+
+### 9- What are the names and age of users who are inactive and have "velit" as a tag?
+[pipeline query](https://github.com/AzeemKhan27/master_mongodb_aggregation/blob/main/8-selectSomeFieldsAndFilterDoc.json)
+
+### 10- How many users have a phone number starting with '+1(940)'?
+[pipeline query](https://github.com/AzeemKhan27/master_mongodb_aggregation/blob/main/9-countUsersHaveStartingNumWith%2B1(940).json)
