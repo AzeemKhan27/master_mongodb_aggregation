@@ -1,1 +1,43 @@
 
+db.users.aggregate([
+    {
+        $unwind: "$tags"
+    },
+    {
+        $grroup:{
+            _id: "$_id",
+            numberOfTags: {
+                $sum:1
+            }
+        },
+        {
+            $group:{
+                _id: null,
+                averageNumberOfTags: {
+                    $avg: "$numberOfTags"
+                }
+            }
+        }
+    }
+])
+
+
+// Approach - II and good
+
+db.users.aggregate([
+    {
+        $addFields : {
+            numberOfTags :{
+                $size: { ifNull:["$tags",[]] }            // Here we finding numbers of tags with condition also.
+            }
+        }
+    },
+    {
+        $group:{
+            _id:null,
+            averageNumberOfTags:{
+                $avg: "$numberOfTags"
+            }
+        }
+    }
+])
