@@ -1,0 +1,11 @@
+
+db.users.aggregate[
+    {
+        $match: {
+            tags:"$enim"
+        }
+    },
+    {
+        $count:"userWithEnimTags"
+    }
+]
