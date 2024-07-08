@@ -1,0 +1,15 @@
+db.users.aggregate[
+    {
+        $match:{
+            isActive:false,
+            tags:"velit"
+        }
+    },
+
+    {
+        $project:{
+            name:1,
+            age:1
+        }
+    }
+]
