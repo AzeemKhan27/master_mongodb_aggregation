@@ -3,6 +3,8 @@
 
 ### (2) $unwind : It is used to transform a single document containing an array into multiple documents and each document contaning an individual values from an array.
 
+### (3) $addField : Adds new fields to documents. $addFields outputs documents that contain all existing fields from the input documents and newly added fields.                                                                                                           The $addFields stage is equivalent to a $project stage that explicitly specifies all existing fields in the input documents and adds the new fields.
+
 
 [Data_Link](https://gist.github.com/hiteshchoudhary)
 
@@ -29,4 +31,4 @@
 [pipeline query](https://github.com/AzeemKhan27/master_mongodb_aggregation/blob/main/5-uniqueEyeColorPresentInCollection.json)
 
 ### 7- What is the average number of tags per user?
-[pipeline query]()
+[pipeline query](https://github.com/AzeemKhan27/master_mongodb_aggregation/blob/main/6-avgNumTagsPerUser.json)
